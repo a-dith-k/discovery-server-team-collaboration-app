@@ -1,0 +1,14 @@
+spring:
+  config:
+    import: optional:file:./env/dev.env[.properties]
+
+server:
+  port: ${SERVER.PORT}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: false
+    fetch-registry: false
+
